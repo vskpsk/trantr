@@ -1,0 +1,15 @@
+/home/vsk/RiderProjects/trantr/trantr/bin/Debug/net7.0/trantr
+/home/vsk/RiderProjects/trantr/trantr/bin/Debug/net7.0/trantr.deps.json
+/home/vsk/RiderProjects/trantr/trantr/bin/Debug/net7.0/trantr.runtimeconfig.json
+/home/vsk/RiderProjects/trantr/trantr/bin/Debug/net7.0/trantr.dll
+/home/vsk/RiderProjects/trantr/trantr/bin/Debug/net7.0/trantr.pdb
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.csproj.AssemblyReference.cache
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.GeneratedMSBuildEditorConfig.editorconfig
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.AssemblyInfoInputs.cache
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.AssemblyInfo.cs
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.csproj.CoreCompileInputs.cache
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.dll
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/refint/trantr.dll
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.pdb
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/trantr.genruntimeconfig.cache
+/home/vsk/RiderProjects/trantr/trantr/obj/Debug/net7.0/ref/trantr.dll
