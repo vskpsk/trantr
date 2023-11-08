@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vsk/RiderProjects/trantr/trantr/trantr.csproj",
+      "projectUniqueName": "/home/vsk/Shuplik/trantr/trantr.csproj",
       "projectName": "trantr",
-      "projectPath": "/home/vsk/RiderProjects/trantr/trantr/trantr.csproj",
+      "projectPath": "/home/vsk/Shuplik/trantr/trantr.csproj",
       "packagesPath": "/home/vsk/.nuget/packages/",
-      "outputPath": "/home/vsk/RiderProjects/trantr/trantr/obj/",
+      "outputPath": "/home/vsk/Shuplik/trantr/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vsk/.nuget/NuGet/NuGet.Config"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
       }
     }
   }

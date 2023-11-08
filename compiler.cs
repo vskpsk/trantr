@@ -15,7 +15,7 @@ public class Compiler
                 while (running)
                 {
                     Console.Write(">");
-                    string action = Console.ReadLine();
+                    string action = Console.ReadLine()??"";
 
                     if (action == "EXIT")
                     {
@@ -23,7 +23,11 @@ public class Compiler
                     }
                     else
                     {
-                        execute(action, mem);
+                        try{
+                            execute(action, mem);
+                        }catch(Exception e){
+                            Console.WriteLine("ERROR");
+                        }
                     }
                 }
                 break;
@@ -39,7 +43,7 @@ public class Compiler
             List<string> allLines = new List<string>();
             while (!sr.EndOfStream)
             {
-                allLines.Add(sr.ReadLine());
+                allLines.Add(sr.ReadLine()??"");
             }
             sr.Close();
             fs.Close();
@@ -184,9 +188,7 @@ public class Compiler
         }
     }
 
-        
-        
-    
+
 
     void execute(string command, int[,] mem)
     {
