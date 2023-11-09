@@ -16,6 +16,11 @@ cd trantr
 ```bash
 chmod +x ./install.sh && sudo ./install.sh
 ```
+Or use the trantr.deb file using single command!
+
+```bash
+curl -L https://github.com/vskpsk/trantr/raw/main/trantr.deb -o temp.deb && sudo dpkg -i temp.deb && rm temp.deb
+```
 
 ## Usage
 
