@@ -1,7 +1,7 @@
 # TRANTR
 
 
-Trantr is a simple mathematical programming language with an 8x8 memory grid
+Trantr(v2/bf) is a simple mathematical programming language with an 8x8 memory grid
 ## Installation
 
 Install Trantr for Linux
@@ -14,12 +14,7 @@ cd trantr
 ```
 
 ```bash
-chmod +x ./install.sh && sudo ./install.sh
-```
-Or use the trantr.deb file using single command!
-
-```bash
-curl -L https://github.com/vskpsk/trantr/raw/main/trantr.deb -o temp.deb && sudo dpkg -i temp.deb && rm temp.deb
+sudo ./install/install.sh
 ```
 
 ## Usage

@@ -7,10 +7,10 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 
-EXECUTABLE_PATH="./bin/Debug/net7.0/trantr"
-DLL_PATH="./bin/Debug/net7.0/trantr.dll"
-CONFIG_PATH="./bin/Debug/net7.0/trantr.runtimeconfig.json"
-DEPS_PATH="./bin/Debug/net7.0/trantr.deps.json"
+EXECUTABLE_PATH="../bin/Debug/net7.0/trantr"
+DLL_PATH="../bin/Debug/net7.0/trantr.dll"
+CONFIG_PATH="../bin/Debug/net7.0/trantr.runtimeconfig.json"
+DEPS_PATH="../bin/Debug/net7.0/trantr.deps.json"
 
 
 if [ ! -f "$EXECUTABLE_PATH" ] || [ ! -f "$DLL_PATH" ] || [ ! -f "$CONFIG_PATH" ] || [ ! -f "$DEPS_PATH" ]; then

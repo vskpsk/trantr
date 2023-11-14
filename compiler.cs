@@ -6,8 +6,9 @@ namespace trantr;
 
 public class Compiler
 {
-    public void doo(int[,] mem, string mode, string path)
+    public string doo(int[,] mem, string mode, string path)
     {
+        string tr = "ok";
         switch (mode)
         {
             case "LIVE":
@@ -80,12 +81,15 @@ public class Compiler
                 }
                 else
                 {
-                    execute(line, mem);
+                    if(execute(line, mem)=="ERROR"){
+                        tr = "ERROR";
+                    }
                 }
                 programCounter++;
             }
             break;
         }
+        return tr;
     }
 
     
@@ -190,8 +194,9 @@ public class Compiler
 
 
 
-    void execute(string command, int[,] mem)
+    string execute(string command, int[,] mem)
     {
+        string rvalue = "ok";
         string[] cutted = cut(command);
 
         string cmd = cutted[0];
@@ -199,7 +204,7 @@ public class Compiler
         if (cutted.Count() < 2)
         {
             Console.WriteLine("ERROR");
-            return;
+            return "ERROR";
         }
         
         int x = exptoval(cutted[1], mem);
@@ -216,6 +221,7 @@ public class Compiler
                 else
                 {
                     Console.WriteLine("ERROR");
+                    rvalue = "ERROR";
                 }
                 break;
             
@@ -228,6 +234,8 @@ public class Compiler
                 else
                 {
                     Console.WriteLine("ERROR");
+                    rvalue = "ERROR";
+
                 }
                 break;
             
@@ -240,6 +248,8 @@ public class Compiler
                 else
                 {
                     Console.WriteLine("ERROR");
+                    rvalue = "ERROR";
+
                 }
                 break;
             
@@ -252,6 +262,8 @@ public class Compiler
                 else
                 {
                     Console.WriteLine("ERROR");
+                    rvalue = "ERROR";
+
                 }
                 break;
             
@@ -264,6 +276,8 @@ public class Compiler
                 else
                 {
                     Console.WriteLine("ERROR");
+                    rvalue = "ERROR";
+
                 }
                 break;
             
@@ -276,13 +290,18 @@ public class Compiler
                 else
                 {
                     Console.WriteLine("ERROR");
+                    rvalue = "ERROR";
+                    
+
                 }
                 break;
             
             default:
                 Console.WriteLine("ERROR");
+                rvalue = "ERROR";
                 break;
         }
+        return rvalue;
         
     }
 }
