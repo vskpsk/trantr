@@ -1,7 +1,7 @@
 # TRANTR
 
 
-Trantr(v2/bf) is a simple mathematical programming language with an 8x8 memory grid
+Trantr (v2.1.0) is a simple mathematical programming language with an 8x8 memory grid
 ## Installation
 
 Install Trantr for Linux
