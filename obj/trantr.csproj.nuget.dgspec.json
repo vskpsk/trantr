@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/vsk/Shuplik/trantr/trantr.csproj": {}
+    "/home/vsk/trantr/trantr.csproj": {}
   },
   "projects": {
-    "/home/vsk/Shuplik/trantr/trantr.csproj": {
+    "/home/vsk/trantr/trantr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/vsk/Shuplik/trantr/trantr.csproj",
+        "projectUniqueName": "/home/vsk/trantr/trantr.csproj",
         "projectName": "trantr",
-        "projectPath": "/home/vsk/Shuplik/trantr/trantr.csproj",
+        "projectPath": "/home/vsk/trantr/trantr.csproj",
         "packagesPath": "/home/vsk/.nuget/packages/",
-        "outputPath": "/home/vsk/Shuplik/trantr/obj/",
+        "outputPath": "/home/vsk/trantr/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vsk/.nuget/NuGet/NuGet.Config"
@@ -48,12 +48,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

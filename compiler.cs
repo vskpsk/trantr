@@ -37,7 +37,7 @@ public class Compiler
                 Console.WriteLine("ERROR");
                 break;
 
-        case "FILE":
+         case "FILE":
             FileStream fs = new FileStream(path, FileMode.Open);
             StreamReader sr = new StreamReader(fs);
 
@@ -61,6 +61,12 @@ public class Compiler
                     {
                         int lineToJump = int.Parse(jumpParts[1]);
                         int timesToJump = int.Parse(jumpParts[2]);
+
+                        if (lineToJump < 0 || lineToJump >= allLines.Count)
+                        {
+                            Console.WriteLine("ERROR");
+                            break;
+                        }
 
                         if (!jumpCounts.ContainsKey(lineToJump) || jumpCounts[lineToJump] > 0)
                         {
@@ -88,6 +94,7 @@ public class Compiler
                 programCounter++;
             }
             break;
+
         }
         return tr;
     }
@@ -169,6 +176,11 @@ public class Compiler
                 int x = int.Parse(cutted[0]);
                 int y = int.Parse(cutted[1]);
 
+                if (x < 0 || x >= 8 || y < 0 || y >= 8)
+                {
+                    return -1;
+                }
+
                 return mem[x, y];
             }
             else
@@ -194,114 +206,114 @@ public class Compiler
 
 
 
-    string execute(string command, int[,] mem)
-    {
-        string rvalue = "ok";
-        string[] cutted = cut(command);
 
-        string cmd = cutted[0];
+     string execute(string command, int[,] mem)
+ {
+     string rvalue = "ok";
+     string[] cutted = cut(command);
 
-        if (cutted.Count() < 2)
-        {
-            Console.WriteLine("ERROR");
-            return "ERROR";
-        }
-        
-        int x = exptoval(cutted[1], mem);
-        int y = exptoval(cutted[2], mem);
-        
-        
+     string cmd = cutted[0];
 
-        switch (cmd)
-        {
-            case "GET":
-                if ( checkxy(x, y) && cutted.Count() == 3){
-                    Console.WriteLine(mem[x,y]);
-                }
-                else
-                {
-                    Console.WriteLine("ERROR");
-                    rvalue = "ERROR";
-                }
-                break;
-            
-            case "SET":
-                if ( checkxy(x, y) && cutted.Count() == 4)
-                {
-                    int value = exptoval(cutted[3], mem);
-                    mem[x, y] = value;
-                }
-                else
-                {
-                    Console.WriteLine("ERROR");
-                    rvalue = "ERROR";
+     if (cutted.Count() < 2)
+     {
+         Console.WriteLine("ERROR");
+         return "ERROR";
+     }
+     
+     int x = exptoval(cutted[1], mem);
+     int y = exptoval(cutted[2], mem);
+     
+     if (x < 0 || x >= 8 || y < 0 || y >= 8)
+     {
+         Console.WriteLine("ERROR");
+         return "ERROR";
+     }
 
-                }
-                break;
-            
-            case "ADD":
-                if ( checkxy(x, y) && cutted.Count() == 4)
-                {
-                    int value = exptoval(cutted[3], mem);
-                    mem[x, y] += value;
-                }
-                else
-                {
-                    Console.WriteLine("ERROR");
-                    rvalue = "ERROR";
+     switch (cmd)
+     {
+         case "GET":
+             if (checkxy(x, y) && cutted.Count() == 3)
+             {
+                 Console.WriteLine(mem[x, y]);
+             }
+             else
+             {
+                 Console.WriteLine("ERROR");
+                 rvalue = "ERROR";
+             }
+             break;
+         
+         case "SET":
+             if (checkxy(x, y) && cutted.Count() == 4)
+             {
+                 int value = exptoval(cutted[3], mem);
+                 mem[x, y] = value;
+             }
+             else
+             {
+                 Console.WriteLine("ERROR");
+                 rvalue = "ERROR";
+             }
+             break;
+         
+         case "ADD":
+             if (checkxy(x, y) && cutted.Count() == 4)
+             {
+                 int value = exptoval(cutted[3], mem);
+                 mem[x, y] += value;
+             }
+             else
+             {
+                 Console.WriteLine("ERROR");
+                 rvalue = "ERROR";
+             }
+             break;
+         
+         case "SUB":
+             if (checkxy(x, y) && cutted.Count() == 4)
+             {
+                 int value = exptoval(cutted[3], mem);
+                 mem[x, y] -= value;
+             }
+             else
+             {
+                 Console.WriteLine("ERROR");
+                 rvalue = "ERROR";
+             }
+             break;
+         
+         case "DIV":
+             if (checkxy(x, y) && cutted.Count() == 4)
+             {
+                 int value = exptoval(cutted[3], mem);
+                 mem[x, y] /= value;
+             }
+             else
+             {
+                 Console.WriteLine("ERROR");
+                 rvalue = "ERROR";
+             }
+             break;
+         
+         case "MUL":
+             if (checkxy(x, y) && cutted.Count() == 4)
+             {
+                 int value = exptoval(cutted[3], mem);
+                 mem[x, y] *= value;
+             }
+             else
+             {
+                 Console.WriteLine("ERROR");
+                 rvalue = "ERROR";
+             }
+             break;
+         
+         default:
+             Console.WriteLine("ERROR");
+             rvalue = "ERROR";
+             break;
+     }
+     return rvalue;
+ }
 
-                }
-                break;
-            
-            case "SUB":
-                if ( checkxy(x, y) && cutted.Count() == 4)
-                {
-                    int value = exptoval(cutted[3], mem);
-                    mem[x, y] -= value;
-                }
-                else
-                {
-                    Console.WriteLine("ERROR");
-                    rvalue = "ERROR";
-
-                }
-                break;
-            
-            case "DIV":
-                if ( checkxy(x, y) && cutted.Count() == 4)
-                {
-                    int value = exptoval(cutted[3], mem);
-                    mem[x, y] /= value;
-                }
-                else
-                {
-                    Console.WriteLine("ERROR");
-                    rvalue = "ERROR";
-
-                }
-                break;
-            
-            case "MUL":
-                if ( checkxy(x, y) && cutted.Count() == 4)
-                {
-                    int value = exptoval(cutted[3], mem);
-                    mem[x, y] *= value;
-                }
-                else
-                {
-                    Console.WriteLine("ERROR");
-                    rvalue = "ERROR";
-                    
-
-                }
-                break;
-            
-            default:
-                Console.WriteLine("ERROR");
-                rvalue = "ERROR";
-                break;
-        }
-        return rvalue;
-        
-    }
 }

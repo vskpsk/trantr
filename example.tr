@@ -1,0 +1,3 @@
+ADD 0 0 1
+GET 0 0
+JUMP 0 9

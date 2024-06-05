@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("trantr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53a1b73f6af72bb9384a4122a2b35bd4d3ff6478")]
 [assembly: System.Reflection.AssemblyProductAttribute("trantr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("trantr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
